@@ -285,8 +285,18 @@ export default function ImageCompressor() {
             </select>
           </label>
 
-          <div style={{ fontSize: 13, color: '#374151' }}>
-            Server-side compression is enabled by default and recommended for best results.
+          <div className="hint" style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+            <div style={{ flex: 1 }}>
+              <strong style={{ display: 'block', marginBottom: 6 }}>Quick tips</strong>
+              <div style={{ fontSize: 13, color: '#374151' }}>
+                Upload photos and we'll make them smaller for faster sharing while keeping them looking great. 
+                {/* iPhone photos will be converted automatically when needed. */}
+              </div>
+            </div>
+            <div style={{ fontSize: 12, color: '#6b7280', textAlign: 'right' }}>
+              Works with JPEG, PNG, HEIC and WebP
+              {/* <div style={{ marginTop: 6 }} className="small">Tip: set iPhone Camera to “Most Compatible” to upload JPEGs.</div> */}
+            </div>
           </div>
 
           <div className="actions">

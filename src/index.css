@@ -21,6 +21,11 @@ body{
   padding:24px;
 }
 
+/* Responsive tweaks */
+@media (max-width: 980px) {
+  .app { padding: 18px; margin: 20px auto; }
+}
+
 header h1{margin:0 0 8px}
 header p{margin:0 0 18px;color:var(--muted)}
 
@@ -39,6 +44,27 @@ header p{margin:0 0 18px;color:var(--muted)}
 .list{margin-top:18px;display:flex;flex-direction:column;gap:12px}
 .item{display:flex;gap:12px;padding:12px;border-radius:8px;border:1px solid #eef2ff;background:#fff}
 .item img{width:120px;height:80px;object-fit:cover;border-radius:6px}
+
+/* Tablet / mobile responsive rules */
+@media (max-width: 768px) {
+  .controls { flex-direction: column; align-items: stretch; }
+  .file-input { width: 100%; text-align: center; }
+  .settings { grid-template-columns: 1fr; }
+  .actions { justify-content: flex-start; }
+  .item { flex-direction: column; align-items: stretch; }
+  .item img { width: 100%; height: auto; max-height: 360px; }
+  .meta { width: 100%; }
+  .row { flex-direction: row; gap: 8px; }
+  .progress-row { margin-top: 8px; }
+}
+
+@media (max-width: 480px) {
+  .app { padding: 12px; margin: 12px; }
+  .file-input { padding: 12px; font-size: 16px; }
+  .actions button { padding: 12px 14px; font-size: 15px; }
+  .item { padding: 10px; }
+  .meta { gap: 6px; }
+}
 .meta{flex:1;display:flex;flex-direction:column;gap:8px}
 .row{display:flex;justify-content:space-between;align-items:center}
 .progress-row{align-items:center;gap:8px}
